@@ -5,23 +5,23 @@
   "fields": [
     {
       "name": "bestillingsId",
-      "type": "String"
+      "type": "string"
     },
     {
       "name": "bestillerId",
-      "type": "String"
+      "type": "string"
     },
     {
       "name": "status",
-      "type": "String"
+      "type": "string"
     },
     {
       "name": "melding",
-      "type": "String"
+      "type": "string"
     },
     {
       "name": "distribusjonId",
-      "type": ["null", "Number"],
+      "type": ["null", "long"],
       "default": null
     }
   ]

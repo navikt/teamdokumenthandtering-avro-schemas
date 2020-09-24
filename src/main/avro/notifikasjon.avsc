@@ -5,42 +5,42 @@
   "fields": [
     {
       "name": "bestillingsId",
-      "type": ["null", "String"],
+      "type": ["null", "string"],
       "default": null
     },
     {
       "name": "bestillerId",
-      "type": ["null", "String"],
+      "type": ["null", "string"],
       "default": null
     },
     {
       "name": "fodselsnummer",
-      "type": ["null", "String"],
+      "type": ["null", "string"],
       "default": null
     },
     {
       "name": "antallRenotifikasjoner",
-      "type": ["null", "Number"],
+      "type": ["null", "int"],
       "default": null
     },
     {
       "name": "renotifikasjonIntervall",
-      "type": ["null", "Number"],
+      "type": ["null", "int"],
       "default": null
     },
     {
       "name": "tittel",
-      "type": ["null", "String"],
+      "type": ["null", "string"],
       "default": null
     },
     {
       "name": "tekst",
-      "type": ["null", "String"],
+      "type": ["null", "string"],
       "default": null
     },
     {
       "name": "prefererteKanaler",
-      "type": ["null", "String"],
+      "type": ["null", "string"],
       "default": null
     }
   ]

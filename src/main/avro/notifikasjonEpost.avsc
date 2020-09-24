@@ -5,7 +5,7 @@
   "fields": [
     {
       "name": "bestillingsId",
-      "type": "String"
+      "type": "string"
     }
   ]
 }
