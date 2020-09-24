@@ -1,7 +1,7 @@
 {
   "type": "record",
   "namespace": "no.nav.doknotifikasjon.schemas",
-  "name": "notifikasjonEpost",
+  "name": "DoknotifikasjonEpost",
   "fields": [
     {
       "name": "bestillingsId",
