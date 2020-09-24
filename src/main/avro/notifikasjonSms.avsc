@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "namespace": "no.nav.doknotifikasjon.schemas",
+  "name": "notifikasjonSms",
+  "fields": [
+    {
+      "name": "bestillingsId",
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "type": "record",
+  "namespace": "no.nav.doknotifikasjon.schemas",
+  "name": "notifikasjon",
+  "fields": [
+    {
+      "name": "bestillingsId",
+      "type": ["null", "String"],
+      "default": null
+    },
+    {
+      "name": "bestillerId",
+      "type": ["null", "String"],
+      "default": null
+    },
+    {
+      "name": "fodselsnummer",
+      "type": ["null", "String"],
+      "default": null
+    },
+    {
+      "name": "antallRenotifikasjoner",
+      "type": ["null", "Number"],
+      "default": null
+    },
+    {
+      "name": "renotifikasjonIntervall",
+      "type": ["null", "Number"],
+      "default": null
+    },
+    {
+      "name": "tittel",
+      "type": ["null", "String"],
+      "default": null
+    },
+    {
+      "name": "tekst",
+      "type": ["null", "String"],
+      "default": null
+    },
+    {
+      "name": "prefererteKanaler",
+      "type": ["null", "String"],
+      "default": null
+    }
+  ]
+}
