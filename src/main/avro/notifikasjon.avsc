@@ -1,7 +1,7 @@
 {
   "type": "record",
   "namespace": "no.nav.doknotifikasjon.schemas",
-  "name": "Donkotifikasjon",
+  "name": "Doknotifikasjon",
   "fields": [
     {
       "name": "bestillingsId",
