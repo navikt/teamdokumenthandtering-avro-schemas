@@ -4,7 +4,7 @@
   "name": "DoknotifikasjonEpost",
   "fields": [
     {
-      "name": "bestillingsId",
+      "name": "notifikasjonDistribusjonId",
       "type": "string"
     }
   ]

@@ -4,7 +4,7 @@
   "name": "DoknotifikasjonSms",
   "fields": [
     {
-      "name": "bestillingsId",
+      "name": "notifikasjonDistribusjonId",
       "type": "string"
     }
   ]
