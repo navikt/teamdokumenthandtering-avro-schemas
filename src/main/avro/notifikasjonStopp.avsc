@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "namespace": "no.nav.doknotifikasjon.schemas",
+  "name": "DoknotifikasjonStopp",
+  "fields": [
+    {
+      "name": "bestillingsId",
+      "type": "string"
+    },
+    {
+      "name": "bestillerId",
+      "type": "string"
+    }
+  ]
+}
