@@ -45,20 +45,14 @@
     },
     {
       "name": "prefererteKanaler",
-      "type": [
-        "null",
-        "string"
-      ],
-      "default": null
-    },
-    {
-      "name": "prefererteKanaler2",
       "type": {
         "type": ["null", "array"],
         "items": {
           "type": "enum",
-          "symbols": ["SMS", "EPOST"]
-        }
+          "symbols": ["SMS", "EPOST"],
+          "name": "kannal"
+        },
+        "name": "prefererteKanal"
       },
       "default": null
     }
