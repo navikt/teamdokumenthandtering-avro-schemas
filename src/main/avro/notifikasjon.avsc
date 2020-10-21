@@ -17,12 +17,18 @@
     },
     {
       "name": "antallRenotifikasjoner",
-      "type": ["null", "int"],
+      "type": [
+        "null",
+        "int"
+      ],
       "default": null
     },
     {
       "name": "renotifikasjonIntervall",
-      "type": ["null", "int"],
+      "type": [
+        "null",
+        "int"
+      ],
       "default": null
     },
     {
@@ -39,14 +45,19 @@
     },
     {
       "name": "prefererteKanaler",
-      "type": ["null", "string"],
+      "type": [
+        "null",
+        "string"
+      ],
       "default": null
     },
     {
       "name": "prefererteKanaler2",
-      "type" : "array",
-      "items" : {
-        "symbols" : [ "SMS", "EPOST" ]
+      "type": {
+        "type": "array",
+        "items": {
+          "symbols": ["SMS", "EPOST"]
+        }
       },
       "default": null
     }
