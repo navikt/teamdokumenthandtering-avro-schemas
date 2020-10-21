@@ -41,6 +41,14 @@
       "name": "prefererteKanaler",
       "type": ["null", "string"],
       "default": null
+    },
+    {
+      "name": "prefererteKanaler2",
+      "type" : "array",
+      "items" : {
+        "symbols" : [ "SMS", "EPOST" ]
+      },
+      "default": null
     }
   ]
 }
