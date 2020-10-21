@@ -51,7 +51,7 @@
         "items": {
           "type": "enum",
           "symbols": ["SMS", "EPOST"],
-          "name": "kanal"
+          "name": "PrefererteKanal"
         },
         "name": "prefererteKanal"
       }
