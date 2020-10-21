@@ -44,10 +44,15 @@
       "type": "string"
     },
     {
+      "default": null,
       "name": "prefererteKanaler",
       "type": {
         "type": "array",
-        "items": "string",
+        "items": {
+          "type": "enum",
+          "symbols": ["SMS", "EPOST"],
+          "name": "kanal"
+        },
         "name": "prefererteKanal"
       }
     }
