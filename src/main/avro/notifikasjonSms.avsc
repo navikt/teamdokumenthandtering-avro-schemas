@@ -5,7 +5,7 @@
   "fields": [
     {
       "name": "notifikasjonDistribusjonId",
-      "type": "string"
+      "type": "int"
     }
   ]
 }
