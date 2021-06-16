@@ -1,0 +1,74 @@
+{
+  "type": "record",
+  "namespace": "no.nav.doknotifikasjon.schemas",
+  "name": "NotifikasjonMedkontaktInfo",
+  "fields": [
+    {
+      "name": "bestillingsId",
+      "type": "string"
+    },
+    {
+      "name": "bestillerId",
+      "type": "string"
+    },
+    {
+      "name": "sikkerhetsnivaa",
+      "type": "int"
+    },
+    {
+      "name": "fodselsnummer",
+      "type": "string"
+    },
+    {
+      "name": "mobiltelefonnummer",
+      "type": "string",
+      "default": null
+    },
+    {
+      "name": "epostadresse",
+      "type": "string",
+      "default": null
+    },
+    {
+      "name": "antallRenotifikasjoner",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "renotifikasjonIntervall",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "tittel",
+      "type": "string"
+    },
+    {
+      "name": "epostTekst",
+      "type": "string"
+    },
+    {
+      "name": "smsTekst",
+      "type": "string"
+    },
+    {
+      "default": [],
+      "name": "prefererteKanaler",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "enum",
+          "symbols": ["SMS", "EPOST"],
+          "name": "PrefererteKanal"
+        },
+        "name": "prefererteKanal"
+      }
+    }
+  ]
+}
