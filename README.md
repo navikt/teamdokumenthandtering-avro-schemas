@@ -33,5 +33,5 @@ For å legge til Avro skjema til en applikasjon må du legge jitpack som reposit
 Hver gang det merges til master blir det gjort en release på Jitpack. Se [her](https://jitpack.io/#navikt/doknotifikasjon-schemas) for alle releases.
 
 ## Henvendelser
-Spørsmål koden eller prosjekttet kan rettes til Team Dokumentløsninger på:
+Spørsmål om koden eller prosjekttet kan rettes til Team Dokumentløsninger på:
 * [\#Team Dokumentløsninger](https://nav-it.slack.com/client/T5LNAMWNA/C6W9E5GPJ)
