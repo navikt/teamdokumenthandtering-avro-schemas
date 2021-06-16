@@ -25,7 +25,7 @@
         "string",
         "null"
       ],
-      "default": []
+      "default": null
     },
     {
       "name": "epostadresse",
@@ -33,7 +33,7 @@
         "string",
         "null"
       ],
-      "default": []
+      "default": null
     },
     {
       "name": "antallRenotifikasjoner",
