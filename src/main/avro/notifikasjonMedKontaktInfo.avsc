@@ -23,7 +23,7 @@
       "name": "mobiltelefonnummer",
       "type": [
         "string",
-        "int"
+        "null"
       ],
       "default": []
     },
@@ -31,7 +31,7 @@
       "name": "epostadresse",
       "type": [
         "string",
-        "int"
+        "null"
       ],
       "default": []
     },
