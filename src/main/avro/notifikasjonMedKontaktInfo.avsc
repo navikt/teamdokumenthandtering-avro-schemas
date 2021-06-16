@@ -21,12 +21,18 @@
     },
     {
       "name": "mobiltelefonnummer",
-      "type": "string",
+      "type": [
+        "string",
+        "int"
+      ],
       "default": []
     },
     {
       "name": "epostadresse",
-      "type": "string",
+      "type": [
+        "string",
+        "int"
+      ],
       "default": []
     },
     {
