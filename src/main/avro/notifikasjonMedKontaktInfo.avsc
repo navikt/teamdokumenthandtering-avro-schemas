@@ -22,12 +22,12 @@
     {
       "name": "mobiltelefonnummer",
       "type": "string",
-      "default": null
+      "default": []
     },
     {
       "name": "epostadresse",
       "type": "string",
-      "default": null
+      "default": []
     },
     {
       "name": "antallRenotifikasjoner",
