@@ -22,16 +22,16 @@
     {
       "name": "mobiltelefonnummer",
       "type": [
-        "string",
-        "null"
+        "null",
+        "string"
       ],
       "default": null
     },
     {
       "name": "epostadresse",
       "type": [
-        "string",
-        "null"
+        "null",
+        "string"
       ],
       "default": null
     },
