@@ -12,10 +12,6 @@
       "type": "string"
     },
     {
-      "name": "sikkerhetsnivaa",
-      "type": "int"
-    },
-    {
       "name": "fodselsnummer",
       "type": "string"
     },
