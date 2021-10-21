@@ -1,42 +1,25 @@
-name: Build and deploy
+name: Build Main
 
 on:
   push:
     branches:
-      - master
+      - 'main'
 
 jobs:
-  build-and-publish-on-master:
+  build:
     runs-on: ubuntu-latest
     steps:
-
-      - name: Sjekk ut koden
-        uses: actions/checkout@v2
-
-      - name: Kompiler
-        uses: navikt/pb-common-gh-actions/build@v1_java8
+      - name: Checkout
+        uses: actions/checkout@v1
+      - uses: actions/setup-java@v1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  release:
-    name: Create Release
-    needs: build-and-publish-on-master
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Set release tag
+          java-version: 11
+      - name: Build & Deploy
+        shell: bash
         run: |
-          export TAG_NAME="1.$(TZ="Europe/Oslo" date +%Y.%m.%d-%H.%M)-$(echo $GITHUB_SHA | cut -c 1-12)"
-          echo "RELEASE_TAG=$TAG_NAME" >> $GITHUB_ENV
-          echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true" >> $GITHUB_ENV
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@latest
+          mvn versions:set -DnewVersion=${GITHUB_SHA::8} --batch-mode
+          mvn deploy --settings ./settings.xml --batch-mode -DdeployAtEnd=true -PpublishGithub -Dmaven.wagon.http.pool=false
+          echo "Deployed artifacts"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ env.RELEASE_TAG }}
-          release_name: ${{ env.RELEASE_TAG }}
-          draft: false
-          prerelease: false
+          GITHUB_USERNAME: x-access-token
+          GITHUB_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
