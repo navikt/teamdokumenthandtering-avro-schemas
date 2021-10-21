@@ -38,9 +38,12 @@
                 <configuration>
                     <stringType>String</stringType>
                     <imports>
-                        <import>${project.basedir}/src/main/avro/Soknadarkivschema.avsc</import>
-                        <import>${project.basedir}/src/main/avro/JournalpostArkiv.avsc</import>
-                        <import>${project.basedir}/src/main/avro/ProcessingEventLog.avsc</import>
+                        <import>${project.basedir}/src/main/avro/notifikasjon.avsc</import>
+                        <import>${project.basedir}/src/main/avro/notifikasjonEpost.avsc</import>
+                        <import>${project.basedir}/src/main/avro/notifikasjonMedKontaktInfo.avsc</import>
+                        <import>${project.basedir}/src/main/avro/notifikasjonSms.avsc</import>
+                        <import>${project.basedir}/src/main/avro/notifikasjonStatus.avsc</import>
+                        <import>${project.basedir}/src/main/avro/notifikasjonStopp.avsc</import>
                     </imports>
                 </configuration>
                 <executions>
