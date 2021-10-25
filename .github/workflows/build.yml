@@ -20,6 +20,8 @@ jobs:
           distribution: adopt
       - name: Build & Deploy
         shell: bash
-        run: mvn deploy --batch-mode -DdeployAtEnd=true -X
+        run:
+          mvn versions:set -DnewVersion=${GITHUB_SHA::8} --batch-mode
+          mvn deploy --batch-mode -DdeployAtEnd=true -X
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
