@@ -18,7 +18,6 @@ jobs:
       - name: Build & Deploy
         shell: bash
         run: |
-          mvn deploy --settings ./settings.xml --batch-mode -DdeployAtEnd=true
-          echo "Deployed artifacts"
+          mvn deploy --settings ./settings.xml --batch-mode -DdeployAtEnd=true -X
         env:
           GITHUB_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
