@@ -55,7 +55,6 @@
             <id>github</id>
             <name>GitHub navikt Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/navikt/doknotifikasjon-schema</url>
-            <uniqueVersion>false</uniqueVersion>
         </repository>
     </distributionManagement>
 </project>

@@ -20,7 +20,6 @@ jobs:
           distribution: adopt
       - name: Build & Deploy
         shell: bash
-        run: |
-          mvn deploy --batch-mode -DdeployAtEnd=true -X
+        run: mvn deploy --batch-mode -DdeployAtEnd=true -X
         env:
-          GITHUB_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
