@@ -17,9 +17,7 @@ jobs:
       - name: Build & Deploy
         shell: bash
         run: |
-          mvn versions:set -DnewVersion=${GITHUB_SHA::8} --batch-mode
-          mvn deploy --batch-mode -DdeployAtEnd=true -PpublishGithub -Dmaven.wagon.http.pool=false
+          mvn --batch-mode deploy
           echo "Deployed artifacts"
         env:
-          GITHUB_USERNAME: x-access-token
           GITHUB_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
