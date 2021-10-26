@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>no.nav.doknotifikasjon</groupId>
-    <artifactId>doknotifikasjon-schemas-2</artifactId>
+    <artifactId>teamdokumenthandtering-avro-schemas</artifactId>
     <version>1.3.0</version>
     <packaging>jar</packaging>
 
-    <name>doknotifikasjon-schemas</name>
+    <name>teamdokumenthandtering-avro-schemas</name>
     <description>Avro Schemas for team dokumentløsninger</description>
 
     <properties>
@@ -54,7 +54,7 @@
         <repository>
             <id>github</id>
             <name>GitHub navikt Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/navikt/doknotifikasjon-schemas-2 </url>
+            <url>https://maven.pkg.github.com/navikt/teamdokumenthandtering-avro-schemas</url>
         </repository>
     </distributionManagement>
 </project>
