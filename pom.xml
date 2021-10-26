@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>doknotifikasjon-schemas</name>
-    <description>Avro Schemas for doknotifikasjon</description>
+    <description>Avro Schemas for team dokumentløsninger</description>
 
     <properties>
         <avro.version>1.10.1</avro.version>
