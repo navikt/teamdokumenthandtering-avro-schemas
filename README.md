@@ -38,4 +38,5 @@ Legge til dette i workflow filen:
 # Local settup
 
 For å få tilgang til Github Package Registry lokalt må mann sette opp ~./m2/settings.xml lokalt på pc. Se på filen m2/maven-setting.xml filen.
+
 Neste steg er å sette opp `GITHUB_USERNAME` and `GITHUB_TOKEN`, disse verdiene må bli genrert via [Personal Github access token](https://github.com/settings/tokens) med `SSO enabled` and `read:packages=true`.
