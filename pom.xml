@@ -52,8 +52,8 @@
 
     <distributionManagement>
         <repository>
-            <id>github-teamdokumenthandtering-avro-schemas</id>
-            <name>GitHub Packages - teamdokumenthandtering-avro-schemas</name>
+            <id>github</id>
+            <name>GitHub navikt Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/navikt/teamdokumenthandtering-avro-schemas</url>
         </repository>
     </distributionManagement>
