@@ -1,6 +1,15 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<servers>
+		<server>
+			<id>github</id>
+			<username>${env.GITHUB_USERNAME}</username>
+			<password>${env.GITHUB_TOKEN}</password>
+		</server>
+	</servers>
 
 	<activeProfiles>
 		<activeProfile>github</activeProfile>
@@ -12,19 +21,10 @@
 			<repositories>
 				<repository>
 					<id>github</id>
-					<name>teamdokumenthandtering-avro-schemas</name>
-					<url>https://maven.pkg.github.com/navikt/teamdokumenthandtering-avro-schemas</url>
+					<name>GitHub navikt Apache Maven Packages</name>
+					<url>https://maven.pkg.github.com/navikt</url>
 				</repository>
 			</repositories>
 		</profile>
 	</profiles>
-
-	<servers>
-		<server>
-			<id>github</id>
-			<username>${GITHUB_USERNAME}</username>
-			<password>${GITHUB_TOKEN}</password>
-		</server>
-	</servers>
-
 </settings>
