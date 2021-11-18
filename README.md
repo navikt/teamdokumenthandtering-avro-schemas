@@ -12,7 +12,32 @@ Avro skjema blir brukt på denne [applikasjonen](https://github.com/navikt/joark
 
 # Sett opp applikasjonen
 
-For å bruke denne maven artifact er det anbefalt at applikasjonen blir satt opp via github action. Github action setter authentication og annet via workflow filen. For å authenticate mot github package registry, må det opprettes en [Personal Github access token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`. Dette tokenet må bli lagt til som secret til repo, som skal brukes i workflow filen.
+For å bruke denne maven artifact er det anbefalt at applikasjonen blir satt opp via github action. Github action setter authentication og annet via workflow filen. For å authenticate mot github package registry, må det opprettes en [Personal Github access token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`. Dette tokenet må bli lagt til som secret til repo, som skal brukes i workflow filen som `ACCES_TOKEN`. Dette tokent kan bli brukt slukt i workflow filen:
+
+```
+      env:
+        GITHUB_USERNAME: x-access-token
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      run: "mvn install -X --settings .m2/maven-settings.xml --file pom.xml"
+```
+
+root pom skal se slikt ut:
+```
+	<repositories>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/navikt/teamdokumenthandtering-avro-schemas</url>
+		</repository>
+	</repositories>
+
+		<dependency>
+			<groupId>no.nav.teamdokumenthandtering</groupId>
+			<artifactId>teamdokumenthandtering-avro-schemas</artifactId>
+			<version>...</version>
+		</dependency>
+```
+
+settings.xml skal se slikt ut: ./m2/settings.xml
 
 Følg denne guiden for å sette opp [maven package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry)
 
