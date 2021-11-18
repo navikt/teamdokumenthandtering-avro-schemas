@@ -12,7 +12,7 @@ Avro skjema blir brukt på denne [applikasjonen](https://github.com/navikt/joark
 
 # Sett opp applikasjonen
 
-For å bruke denne maven artifact er det anbefalt at applikasjonen blir satt opp via github action. Github action setter authentication og annet via workflow filen.
+For å bruke denne maven artifact er det anbefalt at applikasjonen blir satt opp via github action. Github action setter authentication og annet via workflow filen. For å authenticate mot github package registry, må det opprettes en [Personal Github access token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`. Dette tokenet må bli lagt til som secret til repo, som skal brukes i workflow filen.
 
 Følg denne guiden for å sette opp [maven package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry)
 
