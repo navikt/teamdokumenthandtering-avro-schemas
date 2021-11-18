@@ -22,6 +22,6 @@ jobs:
         shell: bash
         run: |
           mvn versions:set -DnewVersion=${GITHUB_SHA::8} --batch-mode
-          mvn deploy  source:jar-no-fork deploy -DskipTests=true -Dmaven.wagon.http.pool=false
+          mvn deploy -X source:jar-no-fork deploy -DskipTests=true -Dmaven.wagon.http.pool=false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
