@@ -6,6 +6,10 @@
     {
       "name": "journalpostId",
       "type": "string"
+    },
+    {
+      "name": "dokumentInfoId",
+      "type": "string"
     }
   ]
 }
