@@ -10,6 +10,12 @@ Avro-skjemaer for joarkhendelser, for mer info for felter se på [confluence](ht
 
 Avro skjema blir brukt på denne [applikasjonen](https://github.com/navikt/joarkhendelser).
 
+# Safselvbetjening
+
+Avro-skjemaer brukt for safselvbetjening
+
+Avro skjema blir brukt på denne [applikasjonen](https://github.com/navikt/safselvbetjening)
+
 # Sett opp applikasjonen
 
 For å bruke denne maven artifact er det anbefalt at applikasjonen blir satt opp via github action. Github action setter authentication og annet via workflow filen. For å authenticate mot github package registry, må det opprettes en [Personal Github access token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`. Dette tokenet må bli lagt til som secret til repo, som skal brukes i workflow filen som `ACCES_TOKEN`. Dette tokent kan bli brukt slukt i workflow filen:
