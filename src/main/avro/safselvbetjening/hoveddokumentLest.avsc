@@ -1,7 +1,7 @@
 {
   "type": "record",
   "namespace": "no.nav.safselvbetjening.schemas",
-  "name": "hoveddokumentLest",
+  "name": "HoveddokumentLest",
   "fields": [
     {
       "name": "journalpostId",
