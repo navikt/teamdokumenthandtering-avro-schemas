@@ -1,24 +1,18 @@
-# Doknotifikasjon
+# Fellesrepo for Avro-skjema i Team Dokumentløsninger
+Følgende apper i Team Dokumentløsninger produserer meldinger av typen Avro, og vi har kategorisert de etter bruksområde.
 
-Avro-skjemaer for doknotifikasjon, for mer info for felter se på [confluence](https://confluence.adeo.no/display/BOA/doknotifikasjon+-+Funksjonell+Beskrivelse)
+Avroskjema som også blir brukt av andre team:
+- [joarkhendelser](https://github.com/navikt/joarkhendelser) - beskrivelse av feltene i Avro-skjemaet finner du [her](https://confluence.adeo.no/display/BOA/Joarkhendelser)
 
-Avro skjema blir brukt på denne [applikasjonen](https://github.com/navikt/doknotifikasjon).
+Avroskjema som kun blir brukt internt i teamet:
+- [doknotifikasjon](https://github.com/navikt/doknotifikasjon) - beskrivelse av feltene i Avro-skjemaet finner du [her](https://confluence.adeo.no/display/BOA/doknotifikasjon+-+Funksjonell+Beskrivelse)
+- [safselvbetjening](https://github.com/navikt/safselvbetjening) - WIP
 
-# Joarkhendelser
+## Oppsett for å kunne bruke Avroskjemaene i din applikasjon
 
-Avro-skjemaer for joarkhendelser, for mer info for felter se på [confluence](https://confluence.adeo.no/display/BOA/Joarkhendelser)
-
-Avro skjema blir brukt på denne [applikasjonen](https://github.com/navikt/joarkhendelser).
-
-# Safselvbetjening
-
-Avro-skjemaer brukt for safselvbetjening
-
-Avro skjema blir brukt på denne [applikasjonen](https://github.com/navikt/safselvbetjening)
-
-# Sett opp applikasjonen
-
-For å bruke denne maven artifact er det anbefalt at applikasjonen blir satt opp via github action. Github action setter authentication og annet via workflow filen. For å authenticate mot github package registry, må det opprettes en [Personal Github access token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`. Dette tokenet må bli lagt til som secret til repo, som skal brukes i workflow filen som `ACCES_TOKEN`. Dette tokent kan bli brukt slukt i workflow filen:
+For å hente Avroskjemaet som et Maven-artifact er det anbefalt at applikasjonen bruker Github Actions, slik at authentication blir gjort i workflow-filen. 
+For å authenticate mot Github Package Registry må det opprettes en [Github Personal Access Token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`. 
+Dette tokenet må bli lagt til som secret til repo og brukes i workflow-filen som `ACCESS_TOKEN`. Dette tokenet kan bli brukt slik i workflow-filen:
 
 ```
       env:
@@ -27,7 +21,7 @@ For å bruke denne maven artifact er det anbefalt at applikasjonen blir satt opp
       run: "mvn install -X --settings .m2/maven-settings.xml --file pom.xml"
 ```
 
-root pom skal se slikt ut:
+Root pom trenger også
 ```
 	<repositories>
 		<repository>
@@ -35,20 +29,26 @@ root pom skal se slikt ut:
 			<url>https://maven.pkg.github.com/navikt/teamdokumenthandtering-avro-schemas</url>
 		</repository>
 	</repositories>
-
-		<dependency>
-			<groupId>no.nav.teamdokumenthandtering</groupId>
-			<artifactId>teamdokumenthandtering-avro-schemas</artifactId>
-			<version>...</version>
-		</dependency>
+```
+og må inkludere dependency
+```
+    <dependency>
+        <groupId>no.nav.teamdokumenthandtering</groupId>
+        <artifactId>teamdokumenthandtering-avro-schemas</artifactId>
+        <version>...</version>
+    </dependency>
 ```
 
-settings.xml skal se slikt ut: ./m2/settings.xml
+I tillegg bør settings.xml-filen inneholde det som ligger [her](https://github.com/navikt/teamdokumenthandtering-avro-schemas/blob/master/m2/maven-settings.xml).
 
-Følg denne guiden for å sette opp [maven package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry)
+Følg denne guiden for å sette opp [maven package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry).
 
-# Local settup
+# Local setup
 
-For å få tilgang til Github Package Registry lokalt må mann sette opp ~./m2/settings.xml lokalt på laptop. Se på filen m2/maven-setting.xml filen for det som må settes opp.
+For å få tilgang til Github Package Registry lokalt må man sette opp ~./m2/settings.xml lokalt på laptop. Se på filen m2/maven-setting.xml filen for det som må settes opp.
 
-Neste steg er å sette opp `GITHUB_USERNAME` and `GITHUB_TOKEN` i enviroment variables, disse verdiene må bli genrert via [Personal Github access token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`.
+Neste steg er å sette opp `GITHUB_USERNAME` and `GITHUB_TOKEN` i enviroment variables. Disse verdiene må bli generert via [Github Personal Access Token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`.
+
+## Henvendelser
+Spørsmål om koden eller prosjektet kan rettes til Team Dokumentløsninger på:
+* [\#Team Dokumentløsninger](https://app.slack.com/client/T5LNAMWNA/C6W9E5GPJ)

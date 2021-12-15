@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>teamdokumenthandtering-avro-schemas</name>
-    <description>Avro Schemas for team dokumentløsninger</description>
+    <description>Avro-skjema for Team Dokumentløsninger</description>
 
     <properties>
         <avro.version>1.10.1</avro.version>
