@@ -43,11 +43,11 @@ I tillegg bør settings.xml-filen inneholde det som ligger [her](https://github.
 
 Følg denne guiden for å sette opp [maven package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry).
 
-# Local setup
+# Lokalt oppsett
 
 For å få tilgang til Github Package Registry lokalt må man sette opp ~./m2/settings.xml lokalt på laptop. Se på filen m2/maven-setting.xml filen for det som må settes opp.
 
-Neste steg er å sette opp `GITHUB_USERNAME` and `GITHUB_TOKEN` i enviroment variables. Disse verdiene må bli generert via [Github Personal Access Token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`.
+Neste steg er å sette opp `GITHUB_USERNAME` and `GITHUB_TOKEN` som miljøvariabler. Disse verdiene må bli generert via [Github Personal Access Token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`.
 
 ## Henvendelser
 Spørsmål om koden eller prosjektet kan rettes til Team Dokumentløsninger på:
