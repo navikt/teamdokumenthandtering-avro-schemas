@@ -1,16 +1,16 @@
 # Fellesrepo for Avro-skjema i Team Dokumentløsninger
 Følgende apper i Team Dokumentløsninger produserer meldinger av typen Avro, og vi har kategorisert de etter bruksområde.
 
-Avroskjema som også blir brukt av andre team:
+Avro-skjema som også blir brukt av andre team:
 - [joarkhendelser](https://github.com/navikt/joarkhendelser) - beskrivelse av feltene i Avro-skjemaet finner du [her](https://confluence.adeo.no/display/BOA/Joarkhendelser)
 
-Avroskjema som kun blir brukt internt i teamet:
+Avro-skjema som kun blir brukt internt i teamet:
 - [doknotifikasjon](https://github.com/navikt/doknotifikasjon) - beskrivelse av feltene i Avro-skjemaet finner du [her](https://confluence.adeo.no/display/BOA/doknotifikasjon+-+Funksjonell+Beskrivelse)
 - [safselvbetjening](https://github.com/navikt/safselvbetjening) - WIP
 
-## Oppsett for å kunne bruke Avroskjemaene i din applikasjon
+## Oppsett for å kunne bruke Avro-skjemaene i din applikasjon
 
-For å hente Avroskjemaet som et Maven-artifact er det anbefalt at applikasjonen bruker Github Actions, slik at authentication blir gjort i workflow-filen. 
+For å hente Avro-skjemaet som et Maven-artifact er det anbefalt at applikasjonen bruker Github Actions, slik at authentication blir gjort i workflow-filen. 
 For å authenticate mot Github Package Registry må det opprettes en [Github Personal Access Token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`. 
 Dette tokenet må bli lagt til som secret til repo og brukes i workflow-filen som `ACCESS_TOKEN`. Dette tokenet kan bli brukt slik i workflow-filen:
 
@@ -21,11 +21,11 @@ Dette tokenet må bli lagt til som secret til repo og brukes i workflow-filen so
       run: "mvn install -X --settings .m2/maven-settings.xml --file pom.xml"
 ```
 
-Root pom trenger også
+Root-POM trenger også
 ```
 	<repositories>
 		<repository>
-			<id>github</id>
+			<id>dok-github</id>
 			<url>https://maven.pkg.github.com/navikt/teamdokumenthandtering-avro-schemas</url>
 		</repository>
 	</repositories>
