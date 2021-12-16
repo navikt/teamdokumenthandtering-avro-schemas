@@ -2,10 +2,10 @@
 Følgende apper i Team Dokumentløsninger produserer meldinger av typen Avro, og vi har kategorisert de etter bruksområde.
 
 Avro-skjema som også blir brukt av andre team:
-- [joarkhendelser](https://github.com/navikt/joarkhendelser) - beskrivelse av feltene i Avro-skjemaet finner du [her](https://confluence.adeo.no/display/BOA/Joarkhendelser)
+- [joarkhendelser](https://github.com/navikt/joarkhendelser) - beskrivelse av feltene i Avro-skjemaet finner du i [joarkhendelser-doken](https://confluence.adeo.no/display/BOA/Joarkhendelser)
 
 Avro-skjema som kun blir brukt internt i teamet:
-- [doknotifikasjon](https://github.com/navikt/doknotifikasjon) - beskrivelse av feltene i Avro-skjemaet finner du [her](https://confluence.adeo.no/display/BOA/doknotifikasjon+-+Funksjonell+Beskrivelse)
+- [doknotifikasjon](https://github.com/navikt/doknotifikasjon) - beskrivelse av feltene i Avro-skjemaet finner du i [doknotifikasjon-doken](https://confluence.adeo.no/display/BOA/doknotifikasjon+-+Funksjonell+Beskrivelse)
 - [safselvbetjening](https://github.com/navikt/safselvbetjening) - WIP
 
 ## Oppsett for å kunne bruke Avro-skjemaene i din applikasjon
@@ -30,16 +30,16 @@ Root-POM trenger også
 		</repository>
 	</repositories>
 ```
-og må inkludere dependency
+og må inkludere [nyeste versjon av dependency](https://github.com/navikt/teamdokumenthandtering-avro-schemas/packages/1065405))
 ```
     <dependency>
         <groupId>no.nav.teamdokumenthandtering</groupId>
         <artifactId>teamdokumenthandtering-avro-schemas</artifactId>
-        <version>...</version>
+        <version>VERSJONSNUMMER</version>
     </dependency>
 ```
 
-I tillegg bør settings.xml-filen inneholde det som ligger [her](https://github.com/navikt/teamdokumenthandtering-avro-schemas/blob/master/m2/maven-settings.xml).
+I tillegg bør settings.xml-filen inneholde det som ligger i [filen maven-settings.xml](https://github.com/navikt/teamdokumenthandtering-avro-schemas/blob/master/m2/maven-settings.xml).
 
 Følg denne guiden for å sette opp [maven package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry).
 
