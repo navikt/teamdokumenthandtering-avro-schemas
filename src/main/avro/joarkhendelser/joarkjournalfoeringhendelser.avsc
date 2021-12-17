@@ -16,7 +16,8 @@
       "type":"string"
     },
     {
-      "name":"journalpostId","type":"long"
+      "name":"journalpostId",
+      "type":"long"
     },
     {
       "name":"journalpostStatus",
@@ -25,10 +26,12 @@
     {
       "name":"temaGammelt",
       "type":"string"
-    },{
+    },
+    {
       "name":"temaNytt",
       "type":"string"
-    },{
+    },
+    {
       "name":"mottaksKanal",
       "type":"string"
     },
