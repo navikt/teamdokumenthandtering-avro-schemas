@@ -50,5 +50,5 @@ For å få tilgang til Github Package Registry lokalt må man sette opp ~./m2/se
 Neste steg er å sette opp `GITHUB_USERNAME` and `GITHUB_TOKEN` som miljøvariabler. Disse verdiene må bli generert via [Github Personal Access Token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`.
 
 ## Henvendelser
-Spørsmål om koden eller prosjektet kan rettes til Team Dokumentløsninger på:
-* [\#Team Dokumentløsninger](https://app.slack.com/client/T5LNAMWNA/C6W9E5GPJ)
+Spørsmål om koden eller prosjektet kan rettes til Team Dokumentløsninger på
+[\#Team Dokumentløsninger](https://app.slack.com/client/T5LNAMWNA/C6W9E5GPJ)
