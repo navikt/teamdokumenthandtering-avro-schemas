@@ -26,8 +26,8 @@ Det er i hovedsak følgende applikasjoner som produserer Avro-meldinger:
 ### [safselvbetjening](https://github.com/navikt/safselvbetjening)
   - informerer dokdistdittnav om når et dokument blir lest av bruker
   - Avro-skjema relatert til safselvbetjening (kun brukt internt i teamet)
-    - [hoveddokumentLest](src/main/avro/doknotifikasjon/hoveddokumentLest.avsc) er tilgjengelig på topic [privat-dokdistdittnav-lestavmottaker](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/privat-dokdistdittnav-lestavmottaker/topic.yaml)
-    - [hoveddokumentLest](src/main/avro/doknotifikasjon/hoveddokumentLest.avsc) er tilgjengelig på topic [privat-dokdistdittnav-lestavmottaker-q1](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/privat-dokdistdittnav-lestavmottaker-q1/topic.yaml)
+    - [hoveddokumentLest](src/main/avro/safselvbetjening/hoveddokumentLest.avsc) er tilgjengelig på topic [privat-dokdistdittnav-lestavmottaker](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/privat-dokdistdittnav-lestavmottaker/topic.yaml)
+    - [hoveddokumentLest](src/main/avro/safselvbetjening/hoveddokumentLest.avsc) er tilgjengelig på topic [privat-dokdistdittnav-lestavmottaker-q1](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/privat-dokdistdittnav-lestavmottaker-q1/topic.yaml)
 
 ## Oppsett for å kunne bruke Avro-skjemaene i din applikasjon
 For å hente Avro-skjemaet som et Maven-artifact er det anbefalt at applikasjonen bruker Github Actions, slik at authentication blir gjort i workflow-filen. 
