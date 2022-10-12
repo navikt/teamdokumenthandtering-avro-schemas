@@ -9,8 +9,8 @@ Det er i hovedsak følgende applikasjoner som produserer Avro-meldinger:
   - gir andre fagsystem beskjed når det skjer endringer (insert eller update) på en inngående journalpost, uavhengig av hvem som har gjort endringen. Ved å filtrere på tema kan ulike fagsystem enkelt få beskjed om oppdateringar som gjelder dem.
   - beskrivelse av feltene i Avro-skjemaet finner du i [joarkhendelser-doken](https://confluence.adeo.no/display/BOA/Joarkhendelser)
   - Avro-skjema relatert til joarkhendelser:
-    - [joarkjournalfoeringhendelser](src/main/avro/doknotifikasjon/joarkjournalfoeringhendelser.avsc) er tilgjengelig på topic [aapen-dok-journalfoering](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/aapen-dok-journalfoering/topic.yaml)
-    - [joarkjournalfoeringhendelser](src/main/avro/doknotifikasjon/joarkjournalfoeringhendelser.avsc) er tilgjengelig på topic [aapen-dok-journalfoering-q1](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/aapen-dok-journalfoering-q1/topic.yaml)
+    - [joarkjournalfoeringhendelser](src/main/avro/joarkhendelser/joarkjournalfoeringhendelser.avsc) er tilgjengelig på topic [aapen-dok-journalfoering](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/aapen-dok-journalfoering/topic.yaml)
+    - [joarkjournalfoeringhendelser](src/main/avro/joarkhendelser/joarkjournalfoeringhendelser.avsc) er tilgjengelig på topic [aapen-dok-journalfoering-q1](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/aapen-dok-journalfoering-q1/topic.yaml)
     
 ### [doknotifikasjon](https://github.com/navikt/doknotifikasjon-2)
   - sender notifikasjon (varsel) til mottaker via epost eller sms.
@@ -63,12 +63,11 @@ I tillegg bør settings.xml-filen inneholde det som ligger i [filen maven-settin
 
 Følg denne guiden for å sette opp [maven package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry).
 
-# Lokalt oppsett
+## Lokalt oppsett
 
 For å få tilgang til Github Package Registry lokalt må man sette opp ~./m2/settings.xml lokalt på laptop. Se på filen m2/maven-setting.xml filen for det som må settes opp.
 
 Neste steg er å sette opp `GITHUB_USERNAME` and `GITHUB_TOKEN` som miljøvariabler. Disse verdiene må bli generert via [Github Personal Access Token](https://github.com/settings/tokens) med `SSO enabled` og `read:packages=true`.
 
-## Henvendelser
-Spørsmål om koden eller prosjektet kan rettes til Team Dokumentløsninger på:
-* [\#Team Dokumentløsninger](https://app.slack.com/client/T5LNAMWNA/C6W9E5GPJ)
+### Henvendelser
+Spørsmål om koden eller prosjektet kan rettes til [Slack-kanalen for \#Team Dokumentløsninger](https://nav-it.slack.com/archives/C6W9E5GPJ)
