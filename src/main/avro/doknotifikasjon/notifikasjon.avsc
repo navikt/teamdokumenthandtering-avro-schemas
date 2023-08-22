@@ -13,7 +13,10 @@
     },
     {
       "name": "sikkerhetsnivaa",
-      "type": "int"
+      "type": "int",
+      "default": 0,
+      "doc": "@Deprecated unused",
+      "deprecated": true
     },
     {
       "name": "fodselsnummer",
