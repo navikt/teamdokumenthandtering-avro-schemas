@@ -15,7 +15,7 @@
       "name": "sikkerhetsnivaa",
       "type": "int",
       "default": 0,
-      "doc": "@Deprecated unused",
+      "doc": "@Deprecated unused Feltet sikkerhetsnivå er ikke lenger i bruk. Det vil fjernes i fremtiden.",
       "deprecated": true
     },
     {
