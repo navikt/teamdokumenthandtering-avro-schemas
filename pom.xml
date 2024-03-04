@@ -12,11 +12,11 @@
     <description>Avro-skjema for Team Dokumentløsninger</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
 
-        <!-- Confluent-versjon 7.1.1 av kafka-avro-serializer bruker avro-versjon 1.11.0 -->
+        <!-- Confluent-versjon 7.6.0 av kafka-avro-serializer bruker avro-versjon 1.11.3 -->
         <!-- Ved oppdatering av kafka-avro-serializer kan denne også oppdateres -->
-        <avro.version>1.11.0</avro.version>
+        <avro.version>1.11.3</avro.version>
 
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
