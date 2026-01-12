@@ -5,6 +5,12 @@ For å kunne konsumere meldingene må du få tilgang av Team Dokumentløsninger 
 Topicer uten q1-suffiks gir tilganger for både q2 og prod. Som hovedregel er det topicene med aapen i navnet som blir brukt utenfor teamet.
 
 Det er i hovedsak følgende applikasjoner som produserer Avro-meldinger:
+### [dokdigdirhendelser](https://github.com/navikt/dokdigdirhendelser)
+  - ta imot hendelser publiserer av Altinn events, og videreformidler disse  interne
+  - Avro-skjema relatert til dokdigdirhendelser:
+    - [altinnMeldingHendelse](src/main/avro/dokdigdirhendelser/altinnmeldinghendelse.avsc) er tilgjengelig på topic [teamdokumenthandtering.privat-altinn-melding-hendelse](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/privat-altinn-melding-hendelse/topic.yaml)
+    - [altinnMeldingHendelse](src/main/avro/dokdigdirhendelser/altinnmeldinghendelse.avsc) er tilgjengelig på topic [teamdokumenthandtering.privat-altinn-melding-hendelse-q1](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/privat-altinn-melding-hendelse-q1/topic.yaml)
+
 ### [joarkhendelser](https://github.com/navikt/joarkhendelser)
   - gir andre fagsystem beskjed når det skjer endringer (insert eller update) på en inngående journalpost, uavhengig av hvem som har gjort endringen. Ved å filtrere på tema kan ulike fagsystem enkelt få beskjed om oppdateringar som gjelder dem.
   - beskrivelse av feltene i Avro-skjemaet finner du i [joarkhendelser-doken](https://confluence.adeo.no/display/BOA/Joarkhendelser)

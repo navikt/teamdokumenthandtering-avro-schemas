@@ -1,0 +1,46 @@
+{
+  "type": "record",
+  "namespace": "no.nav.dokdigdirhendelser.schemas",
+  "name": "AltinnMeldingHendelse",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "resource",
+      "type": "string"
+    },
+    {
+      "name": "resourceinstance",
+      "type": "string"
+    },
+    {
+      "name": "source",
+      "type": "string"
+    },
+    {
+      "name": "specversion",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "subject",
+      "type": "string"
+    },
+    {
+      "name": "alternativesubject",
+      "type": "string"
+    },
+    {
+      "name": "time",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}
