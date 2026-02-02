@@ -21,7 +21,7 @@ jobs:
           java-version: 17
           distribution: temurin
       - name: Create tag
-        uses: paulhatch/semantic-version@v5.4.0
+        uses: paulhatch/semantic-version@v6.0.1
         id: create-tag
         with:
           tag_prefix: ""
