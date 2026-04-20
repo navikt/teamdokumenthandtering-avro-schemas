@@ -23,6 +23,11 @@
       "name": "distribusjonId",
       "type": ["null", "long"],
       "default": null
+    },
+    {
+      "name": "kanal",
+      "type": ["null", "string"],
+      "default": null
     }
   ]
 }
