@@ -1,4 +1,4 @@
-name: Build and tag
+name: Build
 
 on:
   push:
@@ -20,30 +20,12 @@ jobs:
         with:
           java-version: 17
           distribution: temurin
-      - name: Create tag
-        uses: paulhatch/semantic-version@v6.0.2
-        id: create-tag
-        with:
-          tag_prefix: ""
-          major_pattern: "(MAJOR)"
-          minor_pattern: "(MINOR)"
-          bump_each_commit: false
       - name: Build
         shell: bash
-        run: |
-          echo "Setting tag ${{ steps.create-tag.outputs.version }}"
-          mvn versions:set -DnewVersion="${{ steps.create-tag.outputs.version }}"
-          mvn verify --batch-mode --settings ./settings.xml
+        run: mvn verify --batch-mode --settings ./settings.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Push tag
-        run: |
-          git tag ${{ steps.create-tag.outputs.version }}
-          git push origin ${{ steps.create-tag.outputs.version }}
       - name: Update release draft
         uses: release-drafter/release-drafter@b1476f6e6eb133afa41ed8589daba6dc69b4d3f5 # 6.1.0
-        with:
-          tag: ${{ steps.create-tag.outputs.version }}
-          name: ${{ steps.create-tag.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
