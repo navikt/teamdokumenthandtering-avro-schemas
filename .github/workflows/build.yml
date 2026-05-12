@@ -1,4 +1,4 @@
-name: Deploy new package
+name: Build and tag
 
 on:
   push:
@@ -9,8 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      packages: write
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,11 +28,22 @@ jobs:
           major_pattern: "(MAJOR)"
           minor_pattern: "(MINOR)"
           bump_each_commit: true
-      - name: Build and deploy
+      - name: Build
         shell: bash
         run: |
           echo "Setting tag ${{ steps.create-tag.outputs.version }}"
           mvn versions:set -DnewVersion="${{ steps.create-tag.outputs.version }}"
-          mvn deploy --batch-mode --settings ./settings.xml
+          mvn verify --batch-mode --settings ./settings.xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push tag
+        run: |
+          git tag ${{ steps.create-tag.outputs.version }}
+          git push origin ${{ steps.create-tag.outputs.version }}
+      - name: Update release draft
+        uses: release-drafter/release-drafter@b1476f6e6eb133afa41ed8589daba6dc69b4d3f5 # 6.1.0
+        with:
+          tag: ${{ steps.create-tag.outputs.version }}
+          name: ${{ steps.create-tag.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
