@@ -27,7 +27,7 @@ jobs:
           tag_prefix: ""
           major_pattern: "(MAJOR)"
           minor_pattern: "(MINOR)"
-          bump_each_commit: true
+          bump_each_commit: false
       - name: Build
         shell: bash
         run: |
