@@ -29,12 +29,10 @@ Det er i hovedsak følgende applikasjoner som produserer Avro-meldinger:
     - [hoveddokumentLest](src/main/avro/safselvbetjening/hoveddokumentLest.avsc) er tilgjengelig på topic [privat-dokdistdittnav-lestavmottaker](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/privat-dokdistdittnav-lestavmottaker/topic.yaml)
     - [hoveddokumentLest](src/main/avro/safselvbetjening/hoveddokumentLest.avsc) er tilgjengelig på topic [privat-dokdistdittnav-lestavmottaker-q1](https://github.com/navikt/dokumenthandtering-iac/blob/master/kafka-aiven/privat-dokdistdittnav-lestavmottaker-q1/topic.yaml)
 
-## Deploy av nye versjoner
-Det er semantisk versjonering av teamdokumenthandtering-avro-schemas-pakken, og alle commits vil lage en ny versjon (tag). 
-Dersom oppdateringen skal være en major-versjon må commit-tittel inneholde tekststrengen `(MAJOR)`. Dersom commit-tittel inneholder `(MINOR)` vil versjonen bli en
-minor-versjon. Commits som ikke har noen av delene blir automatisk en patch-versjon.
+## Release av nye versjoner
+Publiser release via [releases](https://github.com/navikt/teamdokumenthandtering-avro-schemas/releases). Det opprettes ikke tags pr commit, så den må opprettes manuelt i release-prosessen. Velg passende semantisk versjonering basert på endringene som er gjort siden forrige release.
 
-Maven-pakken, med endringslogg akkumulert av release-drafter, publiseres kun ved release.
+Maven-pakken publiseres automatisk ved publisering av en release.
 
 ### Henvendelser
 Spørsmål om koden eller prosjektet kan rettes til [Slack-kanalen for \#Team Dokumentløsninger](https://nav-it.slack.com/archives/C6W9E5GPJ).
